@@ -1,0 +1,28 @@
+{
+  "id": "d03298a4-9b16-4247-a250-4540cf763fbd",
+  "name": "Reg_class",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "3.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
