@@ -32,7 +32,11 @@ page 50103 "Student Course Card"
                 {
                     ApplicationArea = All;
                 }
-                field(Marks; Rec.MarksStudent)
+                field(Marks1; Rec.MarksStudent1)
+                {
+                    ApplicationArea = All;
+                }
+                field(Marks2; Rec.MarksStudent2)
                 {
                     ApplicationArea = All;
                 }
