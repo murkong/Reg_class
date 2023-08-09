@@ -34,6 +34,10 @@ table 50101 "Student Course"
         field(6; MarksStudent1; Integer)
         {
             DataClassification = ToBeClassified;
+        }
+        field(7; MarksStudent2; Integer)
+        {
+            DataClassification = ToBeClassified;
             trigger OnValidate()
             begin
 
@@ -41,12 +45,12 @@ table 50101 "Student Course"
 
             end;
         }
-        field(7; MarksStudent2; Integer)
+        field(8; AvgMarks; Decimal)
         {
+            Editable = false;
             DataClassification = ToBeClassified;
-
         }
-        field(8; Grade; Text[10])
+        field(9; Grade; Text[10])
         {
 
             DataClassification = ToBeClassified;
@@ -64,27 +68,28 @@ table 50101 "Student Course"
     procedure FnCalculateGrades()
     begin
         TotalMarks := MarksStudent1 + MarksStudent2;
-        AvgMarks := TotalMarks / 2;
+        AvMarks := TotalMarks / 2;
+        AvgMarks := AvMarks;
 
-        if AvgMarks >= 70.0 then
-            if AvgMarks <= 100.0 then
-                Grade := 'A'
-            else
-                if AvgMarks >= 60 then
-                    Grade := 'B'
+
+            if AvgMarks >= 70 then
+                    Grade := 'A'
                 else
-                    if AvgMarks >= 40 then
-                        Grade := 'D'
+                    if AvgMarks >= 60 then
+                        Grade := 'B'
                     else
-                        if AvgMarks >= 0 then
-                            Grade := 'E'
+                        if AvgMarks >= 40 then
+                            Grade := 'D'
                         else
-                            Grade := 'INVALID';
+                            if AvgMarks >= 0 then
+                                Grade := 'E'
+                            else
+                                Grade := 'INVALID';
     end;
 
     var
         TotalMarks: Integer;
-        AvgMarks: Decimal;
+        AvMarks: Decimal;
     // AvgMarks := MarksStudent1 * MarksStudent2;
     // Grade: Code[5];
 

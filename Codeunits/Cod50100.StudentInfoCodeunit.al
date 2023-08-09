@@ -1,11 +1,10 @@
 codeunit 50100 "StudentInfo Codeunit"
 {
     //Creating a new record or insert a record
-    procedure FnCreateStudentInfo(TxtName: Text; CdRegNo: Code[50]; CdAge: Integer; OpGender: Option "",Male,Female) return_value: Boolean
+    procedure FnCreateStudentInfo(TxtName: Text; CdRegNo: Code[50]; CdAge: Integer; OpGender: Option " ",Male,Female) return_value: Boolean
     //Try Changingthe order of the values passed
     begin
         return_value := false;
-        TbStudentInfo.Reset();
         TbStudentInfo.Reset();
         TbStudentInfo.Name := TxtName;
         TbStudentInfo."Reg. No" := CdRegNo;

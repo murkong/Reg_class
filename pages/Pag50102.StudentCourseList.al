@@ -29,6 +29,10 @@ page 50102 "Student Course List"
                 {
                     ApplicationArea = All;
                 }
+                field(AverageMarks; Rec.AvgMarks)
+                {
+                    ApplicationArea = All;
+                }
                 field(Grade; rec.Grade)
                 {
                     Editable = false;

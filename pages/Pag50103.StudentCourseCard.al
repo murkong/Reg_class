@@ -20,10 +20,10 @@ page 50103 "Student Course Card"
                 {
                     ApplicationArea = All;
                 }
-                field(School; Rec.School)
-                {
-                    ApplicationArea = All;
-                }
+                // field(School; Rec.School)
+                // {
+                //     ApplicationArea = All;
+                // }
                 field(Department; Rec.Department)
                 {
                     ApplicationArea = All;
@@ -37,6 +37,10 @@ page 50103 "Student Course Card"
                     ApplicationArea = All;
                 }
                 field(Marks2; Rec.MarksStudent2)
+                {
+                    ApplicationArea = All;
+                }
+                field(AverageMarks; Rec.AvgMarks)
                 {
                     ApplicationArea = All;
                 }
